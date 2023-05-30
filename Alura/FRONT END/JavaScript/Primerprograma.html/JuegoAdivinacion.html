@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer programa con Javascript</title>
+</head>
+<body>
+    <h1>  Juego Adivinación </h1>
+    <script>
+        function saltoLinea(){
+            document.write("<br>");
+        }
+        function imprimir(texto){
+            document.write(texto);
+            saltoLinea();
+        }
+    
+        var dadoPensado = Math.round(Math.random()* 10);
+        var intentos = 3;
+        var inicio = 1;
+        while (inicio <= intentos ) {
+            var numeroTirado = parseInt(prompt(" Ingrese un número del 0 al 10"))
+            if (dadoPensado == numeroTirado){
+            alert("Acerto en el " + inicio + " intento ");
+            break;
+            
+        }
+        else{ 
+            if(numeroTirado>dadoPensado){
+                alert("Fallaste, era un número menor era " + dadoPensado);
+                
+            }
+            else{
+                alert(" Fallaste, Era un número mayor era " + dadoPensado);
+                
+            }
+            }
+            inicio++;
+            
+        }
+
+
+        
+    </script>

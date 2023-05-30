@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer programa con Javascript</title>
+</head>
+<body>
+    <h1>  Media edades de una familia  </h1>
+    <script>
+        function saltoLinea(){
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(texto){
+            document.write(texto);
+            saltoLinea();
+        }
+
+        var numeroMiembros = parseInt(prompt("Ingrese la cantidad de miembros de su familia"));
+        var contador = 1;
+        var edad = 0;
+        var totalEdades = 0;
+
+        while (contador <= numeroMiembros) {
+            
+            edad = parseInt(prompt("Ingrese la edad del familiar " + contador));
+            totalEdades = totalEdades + edad;
+            contador++;
+            
+        }
+        var mediaEdades = totalEdades/numeroMiembros;
+        imprimir("La media de edad en la familia es de: " + mediaEdades);
+        imprimir ("Fin");
+        
+        
+        
+        
+    </script>

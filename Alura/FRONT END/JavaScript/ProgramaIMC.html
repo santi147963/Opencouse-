@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer programa con Javascript</title>
+</head>
+<body>
+    <h1>  PROGRAMA DE IMC </h1>
+    <script>
+
+function saltolinea (){
+        document.write("<br>");
+}
+
+function imprimir(texto){
+
+        document.write(texto)
+        saltolinea();
+}
+
+function calcularIMC(peso, altura){
+    return (peso/(altura*altura));
+}
+
+Nombre = prompt("Cual es su nombre?");
+alturaPersona = prompt(Nombre + " Ingrese su altura");
+Pesopersona =  prompt(Nombre + " Ingrese su peso actual");
+
+imcCalculado = calcularIMC(Pesopersona, alturaPersona);
+
+imprimir (Nombre + " Su IMC calculado es de: " + imcCalculado);
+
+if (imcCalculado < 18.5){
+    imprimir( "Insuficiencia Ponderal ")
+}
+if (imcCalculado > 18.5 && imcCalculado <24.9){
+    imprimir( "Intervalo Normal ")
+}
+if (imcCalculado > 25 && imcCalculado< 29.9){
+    imprimir( "Sobrepeso y preobesidad")
+}
+if (imcCalculado > 30 && imcCalculado < 34.9){
+    imprimir( "Obesidad clase I ")
+}
+if (imcCalculado > 35 && imcCalculado<39.9){
+    imprimir( "Obesidad Clase II ")
+}
+if (imcCalculado >= 40){
+    imprimir( "Obesidad Clase III ")
+}
+
+
+
+
+
+
+    </script>
